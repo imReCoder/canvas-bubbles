@@ -12,8 +12,9 @@ export class BubbleParticle{
         this.x = position.x || Math.random() * canvas.width;
         this.y = position.y || canvas.height + Math.random() * 100;
         this.radius = Math.random() * 20 + 20;
-        this.speedX = Math.random() * 2 + 1;
-        this.speedY = Math.random() * 2 + 1;
+        // speed  of particles , can also be negative
+       this.speedX = Math.random() * 2 - 1; // Horizontal speed
+         this.speedY = Math.random() * 2 + 1; // Vertical speed
         // random color bubbles
         this.color = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
     }
